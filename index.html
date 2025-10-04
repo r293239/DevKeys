@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeKeys - Universal Coding Keyboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #f0f6fc;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(13, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363d;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3fb950;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #f0f6fc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3fb950;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #3fb950 0%, #2ea043 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #8b949e;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #3fb950;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #2ea043;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #f0f6fc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #3fb950;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #3fb950;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            text-align: center;
+            background: #161b22;
+        }
+
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .download-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .download-card h3 {
+            color: #3fb950;
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #238636;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2ea043;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1117;
+            border-top: 1px solid #30363d;
+            padding: 2rem 0;
+            text-align: center;
+            color: #8b949e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">CodeKeys</a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="#usage">Usage</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Keyboard for Coding</h1>
+            <p>Universal Coding Keyboard extension that works across all websites. Hold a key and type coding symbols instantly.</p>
+            <a href="#download" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why CodeKeys?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Universal Compatibility</h3>
+                    <p>Works on GitHub, Stack Overflow, Google Docs, and any website with text inputs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Activation</h3>
+                    <p>Hold Right Control key to activate coding mode. Release to return to normal typing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Customizable Mappings</h3>
+                    <p>Easily customize key mappings and activation keys to fit your workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">Download & Install</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>Browser Extension</h3>
+                    <p>Full extension with settings panel and persistent preferences.</p>
+                    <a href="https://github.com/yourusername/coding-keyboard/archive/main.zip" class="download-btn">Download ZIP</a>
+                </div>
+                <div class="download-card">
+                    <h3>Bookmarklet</h3>
+                    <p>Lightweight version that works as a bookmark. Perfect for restricted environments.</p>
+                    <a href="#bookmarklet" class="download-btn">Get Bookmarklet</a>
+                </div>
+                <div class="download-card">
+                    <h3>Source Code</h3>
+                    <p>Full source code to customize and contribute to the project.</p>
+                    <a href="https://github.com/yourusername/coding-keyboard" class="download-btn">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="features">
+        <div class="container">
+            <h2 class="section-title">How to Use</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>1. Install Extension</h3>
+                    <p>Download and load the extension in your browser's extension manager.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2. Activate Coding Mode</h3>
+                    <p>Hold the Right Control key (configurable) to enter coding mode.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>3. Type Coding Symbols</h3>
+                    <p>While holding activation key, press regular keys to insert coding symbols and shortcuts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CodeKeys. Open source project built for developers.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add bookmarklet section dynamically
+        const bookmarkletCode = `javascript:(function(){${encodeURIComponent(`
+            class CodingKeyboard {
+                constructor() {
+                    this.enabled = true;
+                    this.keyMappings = {
+                        'semicolon': ';', 'quote': '"', 'backquote': '\`',
+                        'bracketLeft': '{', 'bracketRight': '}', 'slash': '/',
+                        'backslash': '\\\\', 'equal': '=', 'minus': '-',
+                        'comma': ',', 'period': '.', 'KeyP': 'console.log();',
+                        'KeyF': 'function() {}', 'KeyA': '=> {}'
+                    };
+                    this.activationKey = 'ControlRight';
+                    this.isActive = false;
+                    this.init();
+                }
+                init() {
+                    this.setupEventListeners();
+                    this.createStatusIndicator();
+                    alert('Coding Keyboard Activated!\\\\nHold RIGHT CONTROL + keys for coding shortcuts.');
+                }
+                setupEventListeners() {
+                    document.addEventListener('keydown', (e) => {
+                        if (e.code === this.activationKey) {
+                            this.isActive = true;
+                            this.updateStatusIndicator();
+                            return;
+                        }
+                        if (this.isActive && this.keyMappings[e.code]) {
+                            e.preventDefault();
+                            this.insertText(this.keyMappings[e.code]);
+                        }
+                    }, true);
+                    document.addEventListener('keyup', (e) => {
+                        if (e.code === this.activationKey) {
+                            this.isActive = false;
+                            this.updateStatusIndicator();
+                        }
+                    }, true);
+                }
+                insertText(text) {
+                    const activeElement = document.activeElement;
+                    if (activeElement && this.isEditable(activeElement)) {
+                        if (activeElement.isContentEditable) {
+                            document.execCommand('insertText', false, text);
+                        } else if (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA') {
+                            const start = activeElement.selectionStart;
+                            const end = activeElement.selectionEnd;
+                            activeElement.value = activeElement.value.substring(0, start) + text + activeElement.value.substring(end);
+                            activeElement.selectionStart = activeElement.selectionEnd = start + text.length;
+                        }
+                        activeElement.dispatchEvent(new Event('input', {bubbles: true}));
+                    }
+                }
+                isEditable(element) {
+                    return (
+                        element.tagName === 'TEXTAREA' ||
+                        (element.tagName === 'INPUT' && ['text','search','email','url'].includes(element.type)) ||
+                        element.isContentEditable
+                    );
+                }
+                createStatusIndicator() {
+                    this.statusIndicator = document.createElement('div');
+                    this.statusIndicator.innerHTML = '<div style="position:fixed;top:10px;right:10px;z-index:10000;background:#1a1f24;color:white;padding:8px 12px;border-radius:6px;font-family:-apple-system;font-size:12px;border:1px solid #30363d;"><span>CodeKeys: </span><span id="codeKeysStatus">READY</span></div>';
+                    document.body.appendChild(this.statusIndicator);
+                    this.statusElement = document.getElementById('codeKeysStatus');
+                }
+                updateStatusIndicator() {
+                    if (this.statusElement) {
+                        this.statusElement.textContent = this.isActive ? 'ACTIVE' : 'READY';
+                        this.statusElement.style.color = this.isActive ? '#3fb950' : '#d29922';
+                    }
+                }
+            }
+            if (!window.codingKeyboard) window.codingKeyboard = new CodingKeyboard();
+        `)}})();`;
+
+        // Add bookmarklet instructions when clicking the bookmarklet download
+        document.addEventListener('click', function(e) {
+            if (e.target.getAttribute('href') === '#bookmarklet') {
+                e.preventDefault();
+                const instructions = `
+                    <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000;">
+                        <div style="background:#161b22;padding:2rem;border-radius:12px;border:1px solid #30363d;max-width:500px;width:90%;">
+                            <h3 style="color:#3fb950;margin-bottom:1rem;">Bookmarklet Instructions</h3>
+                            <p style="margin-bottom:1rem;">1. Drag this link to your bookmarks bar:</p>
+                            <a href="${bookmarkletCode}" style="display:block;background:#238636;color:white;padding:10px;border-radius:6px;text-decoration:none;text-align:center;margin-bottom:1rem;">CodeKeys Bookmarklet</a>
+                            <p style="margin-bottom:1rem;">2. Or create a new bookmark with this URL:</p>
+                            <textarea style="width:100%;height:80px;background:#0d1117;border:1px solid #30363d;color:#f0f6fc;padding:10px;border-radius:6px;font-family:monospace;font-size:12px;" readonly>${bookmarkletCode}</textarea>
+                            <button onclick="this.closest('div').style.display='none'" style="background:#f85149;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;margin-top:1rem;width:100%;">Close</button>
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', instructions);
+            }
+        });
+    </script>
+</body>
+</html>
