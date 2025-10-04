@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CodeKeys</h1>
+      <p class="subtitle">Universal Coding Keyboard</p>
+    </div>
+    
+    <div class="section">
+      <div class="toggle-section">
+        <span class="toggle-label">Enable Coding Keyboard</span>
+        <label class="switch">
+          <input type="checkbox" id="toggleEnabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Activation Key</h3>
+      <select id="activationKey" class="select">
+        <option value="ControlRight">Right Control</option>
+        <option value="ControlLeft">Left Control</option>
+        <option value="AltRight">Right Alt</option>
+        <option value="AltLeft">Left Alt</option>
+        <option value="ShiftRight">Right Shift</option>
+        <option value="ShiftLeft">Left Shift</option>
+        <option value="CapsLock">Caps Lock</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>Display Settings</h3>
+      <div class="checkbox-group">
+        <label class="checkbox">
+          <input type="checkbox" id="showStatus">
+          <span class="checkmark"></span>
+          Show status indicator
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Key Mappings</h3>
+      <div class="mappings-container">
+        <div id="mappingsList" class="mappings-list"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Excluded Sites</h3>
+      <div class="excluded-sites">
+        <textarea id="excludedSites" placeholder="Enter one site per line&#10;Example:&#10;https://mail.google.com&#10;https://docs.google.com" rows="4"></textarea>
+        <p class="help-text">One URL per line. The extension will be disabled on these sites.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="instructions">
+        <h4>How to Use:</h4>
+        <p>1. Hold your <strong id="currentActivationKey">ControlRight</strong> key to activate</p>
+        <p>2. Press keys while holding to insert symbols/code</p>
+        <p>3. Works on any website with text inputs</p>
+        <p class="shortcut-hint">💡 Try holding activation key + P for <code>console.log();</code></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="saveSettings" class="btn btn-primary">Save Settings</button>
+      <button id="resetSettings" class="btn btn-secondary">Reset to Defaults</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
